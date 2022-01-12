@@ -1,25 +1,38 @@
-import logo from './logo.svg';
-import './App.css';
+import { useState } from 'react';
+import ProductList from './component/ProductList';
+import ProductForm from './component/ProductForm';
+import Modal from './component/Modal';
 
-function App() {
+import styles from './App.module.css';
+
+const App = () => {
+  const [showModal, setShowModal] = useState(false);
+
+  const toggleModal = () => {
+    setShowModal(state => !state);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
+    <>
+      <div className={styles.container}>
+        <h1 className={styles.title}>Product List</h1>
+        <button
+          type="button"
+          className={styles.addProductButton}
+          onClick={toggleModal}
         >
-          Learn React
-        </a>
-      </header>
-    </div>
+          Add product
+        </button>
+      </div>
+
+      <ProductList />
+      {showModal && (
+        <Modal>
+          <ProductForm onClick={toggleModal} />
+        </Modal>
+      )}
+    </>
   );
-}
+};
 
 export default App;

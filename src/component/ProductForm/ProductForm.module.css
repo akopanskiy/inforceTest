@@ -1,0 +1,29 @@
+form {
+  position: relative;
+  height: 100%;
+}
+
+input {
+  border: 2px solid red;
+}
+.divLabel {
+  display: flex;
+  margin-bottom: 2px;
+}
+span {
+  color: blue;
+}
+.closeBtn {
+  position: absolute;
+  top: 0%;
+  left: 88%;
+  background-color: rgb(47, 76, 206);
+}
+.addBtnDiv {
+  display: flex;
+  justify-content: center;
+}
+.addBtn {
+  margin-top: 20px;
+  background-color: rgb(47, 76, 206);
+}

@@ -1,0 +1,94 @@
+{
+  "products": [
+    {
+      "name": "Renault",
+      "count": 4,
+      "size": {
+        "width": 200,
+        "height": 200
+      },
+      "weight": "Renault",
+      "id": 1
+    },
+    {
+      "name": "Mercedes",
+      "count": "5",
+      "size": {
+        "width": "3000",
+        "height": "2000"
+      },
+      "weight": "Mercedes",
+      "id": "6PhnSCckR"
+    },
+    {
+      "name": "BMW",
+      "count": "7",
+      "size": {
+        "width": "3000",
+        "height": "2000"
+      },
+      "weight": "BMW",
+      "id": "LNsYXDgsp"
+    },
+    {
+      "name": "Audi",
+      "count": "10",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "weight": "Audi",
+      "id": "MyV_fsh02"
+    },
+    {
+      "name": "Peugeot",
+      "count": "8",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "weight": "Peugeot",
+      "id": "uj_h1ZYA5"
+    },
+    {
+      "name": "Ferrari",
+      "count": "15",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "weight": "2500kg",
+      "id": "uBLD-b58R"
+    },
+    {
+      "id": "XOF2tjbEh",
+      "name": "Ford",
+      "count": "2",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "weight": "3000kg"
+    },
+    {
+      "name": "Fiat",
+      "count": "17",
+      "weight": "1500kg",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "id": "unPrJbfZWFl"
+    },
+    {
+      "name": "Seat",
+      "count": "3",
+      "weight": "2500kg",
+      "size": {
+        "width": "2000",
+        "height": "2000"
+      },
+      "id": "RTtSSthdU_N"
+    }
+  ]
+}

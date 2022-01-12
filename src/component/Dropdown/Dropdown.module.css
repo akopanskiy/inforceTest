@@ -1,0 +1,23 @@
+.dropdown {
+  display: block;
+}
+.blockBtn {
+  display: block;
+  margin-top: 3px;
+}
+.deleteBtn {
+  background-color: red;
+  border-radius: 50%;
+  min-width: 60px;
+}
+.editBtn {
+  background-color: chartreuse;
+  border-radius: 50%;
+  min-width: 60px;
+}
+.dropBtn {
+  background-color: rgb(28, 161, 23);
+}
+.commentBtn {
+  background-color: orange;
+}
