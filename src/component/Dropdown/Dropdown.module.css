@@ -21,3 +21,13 @@
 .commentBtn {
   background-color: orange;
 }
+.deleteModalBtn {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+}
+.editBtn {
+  background-color: chartreuse;
+  border-radius: 50%;
+  min-width: 60px;
+}

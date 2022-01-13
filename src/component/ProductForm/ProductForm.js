@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { addProduct } from '../../redux/operations';
+import Button from '../Button';
 import shortid from 'shortid';
 import styles from './ProductForm.module.css';
 
@@ -127,13 +128,18 @@ const ProductForm = ({ onClick }) => {
           </div>
         </label>
         <div className={styles.addBtnDiv}>
-          <button className={styles.addBtn} type="submit">
-            Add contact
-          </button>
+          <Button
+            name={'Add contact'}
+            type={'submit'}
+            className={styles.addBtn}
+          />
         </div>
-        <button className={styles.closeBtn} type="button" onClick={onClick}>
-          Close
-        </button>
+        <Button
+          name={'Close'}
+          type={'button'}
+          className={styles.closeBtn}
+          onClick={onClick}
+        />
       </form>
     </>
   );

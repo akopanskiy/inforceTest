@@ -61,14 +61,14 @@
       "id": "uBLD-b58R"
     },
     {
-      "id": "XOF2tjbEh",
       "name": "Ford",
-      "count": "2",
+      "count": "1",
+      "weight": "3000kg",
       "size": {
         "width": "2000",
         "height": "2000"
       },
-      "weight": "3000kg"
+      "id": "XOF2tjbEh"
     },
     {
       "name": "Fiat",

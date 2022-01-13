@@ -7,9 +7,9 @@ const SortSelector = () => {
   const [sortOrder, setSortOrder] = useState('');
 
   const sortOptions = [
-    { value: '', label: '' },
-    { value: 'name', label: 'За назвою' },
+    // { value: '', label: '' },
     { value: 'count', label: 'за кількістю' },
+    { value: 'name', label: 'за назвою' },
   ];
   const SortOrderChange = order => {
     dispatch(sortProduct(order));

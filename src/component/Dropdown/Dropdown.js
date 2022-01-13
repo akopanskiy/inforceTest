@@ -1,5 +1,6 @@
 import Modal from '../Modal';
 import EditProduct from '../EditProduct';
+import Button from '../Button';
 import styles from './Dropdown.module.css';
 
 import { deleteProduct } from '../../redux/operations';
@@ -11,6 +12,7 @@ const Dropdown = ({ id }) => {
   const [visible, setVisible] = useState(false);
   const [product, setProduct] = useState([]);
   const [showModal, setShowModal] = useState(false);
+
   const dispatch = useDispatch();
 
   useEffect(() => {
@@ -27,9 +29,12 @@ const Dropdown = ({ id }) => {
 
   return (
     <>
-      <button className={styles.dropBtn} type="button" onClick={toggleDropdown}>
-        {visible ? 'Приховати' : 'Показати'}
-      </button>
+      <Button
+        type={'button'}
+        name={visible ? 'Приховати' : 'Показати'}
+        className={styles.dropBtn}
+        onClick={toggleDropdown}
+      />
 
       {visible && product.id === id && (
         <div className={styles.dropdown}>
@@ -41,25 +46,31 @@ const Dropdown = ({ id }) => {
           <h3>Weight: {product.weight}</h3>
 
           <div className={styles.blockBtn}>
-            <button
+            <Button
+              type={'button'}
+              name={'Delete'}
               className={styles.deleteBtn}
-              type="button"
               onClick={toggleModal}
-            >
-              Delete
-            </button>
+            />
+
             {showModal && (
               <Modal>
                 <h2>Ви справді бажаєте видалити продукт?</h2>
-                <button
-                  type="button"
-                  onClick={() => dispatch(deleteProduct(product.id))}
-                >
-                  Yes
-                </button>
-                <button type="button" onClick={toggleModal}>
-                  Nit
-                </button>
+                <div className={styles.deleteModalBtn}>
+                  <Button
+                    type={'button'}
+                    name={'Yes'}
+                    className={styles.deleteBtn}
+                    onClick={() => dispatch(deleteProduct(product.id))}
+                  />
+
+                  <Button
+                    type={'button'}
+                    name={'Nit'}
+                    onClick={toggleModal}
+                    className={styles.editBtn}
+                  />
+                </div>
               </Modal>
             )}
             <EditProduct product={product} />

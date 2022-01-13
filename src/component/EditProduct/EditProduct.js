@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { updateProduct } from '../../redux/operations';
 import shortid from 'shortid';
 import Modal from '../Modal';
+import Button from '../Button';
 import styles from './Edit.module.css';
 
 const EditProduct = ({ product }) => {
@@ -61,9 +62,13 @@ const EditProduct = ({ product }) => {
 
   return (
     <>
-      <button className={styles.editBtn} type="button" onClick={toggleModal}>
-        Edit
-      </button>
+      <Button
+        className={styles.editBtn}
+        type={'button'}
+        onClick={toggleModal}
+        name={'Edit'}
+      />
+
       {showModal && (
         <Modal>
           <form onSubmit={handleSubmit}>
@@ -138,17 +143,18 @@ const EditProduct = ({ product }) => {
               </div>
             </label>
             <div className={styles.addBtnDiv}>
-              <button className={styles.addBtn} type="submit">
-                Update
-              </button>
+              <Button
+                name={'Update'}
+                className={styles.addBtn}
+                type={'submit'}
+              />
             </div>
-            <button
+            <Button
+              name={'Close'}
               className={styles.closeBtn}
-              type="button"
+              type={'button'}
               onClick={toggleModal}
-            >
-              Close
-            </button>
+            />
           </form>
         </Modal>
       )}
